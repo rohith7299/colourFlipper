@@ -1,16 +1,19 @@
-let btn =document.getElementById('btn');
-let span = document.getElementById('color');
-let hex = [1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+const btn = document.getElementById("btn")
+const colortext = document.getElementById("color")
+const wrap = document.getElementById("wrap")
+const hex =[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
 
-function changebg(){
-for(let i =0 ; i<=6 ; i++){
-    let cg =Math.floor()
-}}
+btn.addEventListener('click',function(){
+    let hexColor = '#'
+    for(let i=1;i<=6;i++){
+        hexColor += randHexValue()
+    }
+    wrap.style.backgroundColor = hexColor   
+    colortext.innerHTML = hexColor
+})
 
-
-function random(){
-    let hex = Math.floor(Math.random()*16)
-    console.log(hex)
-    return hex
+function  randHexValue(){
+    let randomIndex = Math.floor(Math.random()*16)  
+    return hex[randomIndex]
 }
-random()
+
